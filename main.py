@@ -10,7 +10,7 @@ tasks = {}
 run = True
 
 while run:
-    command = input("Введите команду: ")
+    command = input("Bведите команду: ")
     if command == "help":
         print(HELP)
     elif command == "show":
