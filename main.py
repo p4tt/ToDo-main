@@ -19,7 +19,7 @@ while run:
             for task in tasks[date]:
                 print("Задача - ", task)
         else:
-          print("Нет записей для этой даты.")
+          print("Нет задач на эту дату.")
 
     elif command == "showall":
         for key,value in tasks.items():
