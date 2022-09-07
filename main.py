@@ -3,8 +3,11 @@ help - напечатать справку по программе.
 add - добавить задачу в список (название задачи запрашиваем у пользователя).
 show - напечатать задачи на определенную дату.
 showall - напечатать все добавленные задачи.
-exit - завершить работу."""
+exit - завершить работу.
+random - добавить случайную задачу на сегодня"""
 
+
+random_task = "random"
 tasks = {}
 
 run = True
@@ -31,8 +34,16 @@ while run:
         if date in tasks:
             tasks[date].append(task)
         else:
+            tasks[date] = []
             tasks[date] = [task]
         print("Задача", task, "добавлена на дату", date)
+    elif command=="random":
+        if "Сегодня" in tasks:
+            tasks["Сегодня"].append(random_task)
+        else:
+            tasks["Сегодня"] = []
+            tasks["Сегодня"].append(random_task)
+            print("Добавлена случайная задача на сегодняшний день.")
     elif command == "exit":
         print("Shutdown.")
         break
